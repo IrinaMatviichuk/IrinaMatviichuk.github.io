@@ -1,0 +1,11 @@
+{
+	"admin": [
+		"#/test",
+		"#/admin/userList",
+		"#/admin/userEdit",
+		"#/admin/questions"
+	],
+	"userLogin": [
+		"#/test"
+	]
+}

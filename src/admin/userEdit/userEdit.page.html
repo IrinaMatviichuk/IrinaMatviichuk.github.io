@@ -1,0 +1,77 @@
+<div class="usersList">
+    <div>
+        <table>
+        	<thead>
+                <tr>
+                    <td colspan="3"><input type="text" id="searchUserEdit" class="search searchUser" placeholder="enter user" autocomplete="off">
+                    </td>
+                    <td colspan="2"><button id="addUserNew" class="search">Add</button></td>
+                    <dialog id="dialogUserNew">
+                        <div class="userForm">
+                            <label for="enterLoginNew" class="label">Login:</label>
+                            <input id="enterLoginNew" name="enterLoginNew" class="fieldAdmin" placeholder="Enter login" type="text">
+                            <label for="enterFullnameNew" class="label">Fullname:</label>
+                            <input id="enterFullnameNew" name="enterFullnameNew" class="fieldAdmin" placeholder="Enter fullname" type="text">
+                            <label for="roleUserChangeNew" class="label">User role:</label>
+                            <select id="roleUserChangeNew" class="fieldAdmin">
+                                <option>Enter user role for change or add</option>
+                                <option>admin</option>
+                                <option>userLogin</option>
+                            </select>
+                        </div>                       
+                        <div class="buttonForAdminControl">
+                            <button id="closeUserNew" class="buttonAdmin decorElement closeUser">Close</button>
+                            <button id="saveUserNew" class="buttonAdmin decorElement saveUser">Add</button>
+                        </div>
+                    </dialog>
+                </tr>
+        		<tr class="borderTableBottom">
+        			<td class="borderTableRight">Full name</td>
+        			<td class="borderTableRight">Login</td>
+                    <td class="borderTableRight">Role</td>
+                    <td colspan="2">Button for edit</td>
+        		<tr>
+        	</thead>
+            <tbody id="usersList">
+                <dialog id="editUserDelete">
+                    <div class="userForm">Admin cant remove!</div>
+                    <div class="buttonForAdminControl">
+                        <button id="closeUserDelete" class="buttonAdmin closeUser">Close</button>
+                    </div>
+                <dialog>
+                {{#each tableWithUser}}
+                <tr class="borderTableBottom">
+                    <td class="borderTableRight">{{fullName}}</td>
+                    <td class="borderTableRight">{{login}}</td>
+                    <td class="borderTableRight">{{role}}</td>
+                    <td class="borderTableRight"><button id="deleteUser{{id}}" class="editAdminButton deleteUser">Delete</button></td>
+                    <td><button id="editUser{{id}}" class="editAdminButton editUser">Edit</button></td>
+                    <dialog id="dialogUser{{id}}">
+                        <div class="userForm">
+                            <label for="enterLogin{{id}}" class="label">Login:</label>
+                            <input id="enterLogin{{id}}" name="enterLogin{{id}}" class="fieldAdmin" placeholder="Enter login" type="text" value = "{{login}}">
+                            <label for="enterFullname{{id}}" class="label">Fullname:</label>
+                            <input id="enterFullname{{id}}" name="enterFullname{{id}}" class="fieldAdmin" placeholder="Enter fullname" type="text" value = "{{fullName}}">
+                            <label for="roleUserChange{{id}}" class="label">User role:</label>
+                            <select id="roleUserChange{{id}}" class="fieldAdmin">
+                                <option>{{role}}</option>
+                                <option>admin</option>
+                                <option>userLogin</option>
+                            </select>
+                            <label for="passwordUserChange{{id}}" class="label">Reset password:</label>
+                            <select id="passwordUserChange{{id}}" class="fieldAdmin">
+                                <option>No</option>
+                                <option>Yes</option>
+                            </select>
+                        </div>                       
+                        <div class="buttonForAdminControl">
+                            <button id="closeUser{{id}}" class="buttonAdmin decorElement closeUser">Close</button>
+                            <button id="saveUser{{id}}" class="buttonAdmin decorElement saveUser">Save</button>
+                        </div>
+                    </dialog>
+                <tr>
+                {{/each}}
+            </tbody>
+    	</table>
+    </div>
+</div>

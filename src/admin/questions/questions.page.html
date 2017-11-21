@@ -1,0 +1,74 @@
+<div class="questionControl">
+	<table class="listQuestion">
+        <thead>
+        	<tr class="borderTableBottom">
+				<td colspan="2"><input type="text" id="searchQuestionInput" class="search" placeholder="enter question" autocomplete="off"></td>
+				<td colspan="2"><button id="addQuestionForm" class="search">Add</button></td>
+				<dialog id="dialogCreateQuestions">
+					<div class="createQuestions">
+				        <div class="caseQuestion">
+				            <label for="enterQuestion" class="labelQuestion">Question:</label>
+				            <input id="enterQuestion" name="enterQuestion" class="fieldQuestion" placeholder="Enter question" type="text">
+				            <label for="enterNumberAnswer" class="labelQuestion">NumAnswer:</label>
+				            <input id="enterNumberAnswer" name="enterNumberAnswer" class="fieldQuestion" placeholder="Enter number answer" type="number">
+				        </div>
+				        <div class="caseQuestion">
+				        	{{#if active}}
+				        	<div class="answerEnterLabel">Enter answer and mark the correct answers in checkbox:</div>
+				        	{{#each newIdAnswer}}
+				        	<div class="enterAnswerCase">
+								<input id="enterCorrect{{idAnswer}}" type="checkbox" class="checkboxAnswer">
+								<input id="enterAnswer{{idAnswer}}" type="text" name="enterAnswer" class="fieldQuestion" placeholder="Enter answer">
+				        	</div>
+				        	{{/each}}
+				        	{{/if}}
+				        </div>
+				        <div class="buttonForAdminControl">
+				            <button id="clearFieldQuestion" class="buttonAdmin decorElement">Clear</button>
+				            <button id="addFieldForAnswer" class="buttonAdmin decorElement">Next</button>
+				            <button id="addQuestion" class="buttonAdmin decorElement notVisible">Add</button>
+				            <button id="closeQuestionAdd" class="buttonAdmin decorElement">Close</button>
+				        </div>
+				    </div>					
+				</dialog>
+        	<tr>
+        	<tr class="borderTableBottom">
+				<td class="borderTableRight">№</td>
+				<td class="borderTableRight">Question</td>
+				<td colspan="2">Button for edit</td>
+        	<tr>
+        </thead>
+        <tbody id="questionList">
+			{{#each tableWithQuestion}}
+			<tr class="borderTableBottom">
+				<td class="borderTableRight">{{idQuestion}}</td>
+				<td class="borderTableRight">{{question}}</td>
+				<td class="borderTableRight"><button id="deleteQuestion{{idQuestion}}" class="editAdminButton delete">Delete</button></td>
+				<td class="borderTableRight"><button id="editQuestion{{idQuestion}}" class="editAdminButton edit">Edit</button></td>
+				<dialog id="dialogEditQuestions{{idQuestion}}">
+					<div class="editQuestions">
+				        <div class="caseQuestion">
+				            <label for="enterQuestion{{idQuestion}}" class="labelQuestion">Question № {{idQuestion}}:</label>
+				            <input id="enterQuestion{{idQuestion}}" name="enterQuestion{{idQuestion}}" class="fieldQuestion" placeholder="Enter question" type="text" value = "{{question}}">
+				        </div>				        
+				        <div id="idAnswerCase{{idQuestion}}" class="caseQuestion">
+				            {{#each variantAnswer}} 
+				            <div class="enterAnswerCase">
+				                <input id="enterCorrect{{idAnswer}}" type="checkbox" class="checkboxAnswer" {{#if correct}} checked = "{{correct}}"{{/if}}>
+				                <input id="enterAnswer{{idAnswer}}" class="fieldQuestion" placeholder="Enter answer" type="text" value = "{{answer}}">
+				                <button id="deleteAnswer{{idAnswer}}" class="editAdminButton deleteAnswer">Delete</button>
+				            </div>
+				            {{/each}}
+				        </div>
+				        <div class="buttonForAdminControl">
+				            <button id="closeQuestionEdit{{idQuestion}}" class="buttonAdmin decorElement close">Close</button>
+				            <button id="addNewVariantAnswer{{idQuestion}}" class="buttonAdmin decorElement add">Add answer</button>
+				            <button id="saveQuestion{{idQuestion}}" class="buttonAdmin decorElement save">Save</button>
+				        </div>
+				    </div>
+				</dialog>
+			<tr>
+			{{/each}}
+		</tbody>
+	</table>
+</div>

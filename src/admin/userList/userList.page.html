@@ -1,0 +1,26 @@
+<div class="usersList">
+    <div>
+        <table>
+        	<thead>
+                <tr colspan="2"><input type="text" id="searchUserResult" class="search searchUser" placeholder="enter user" autocomplete="off">
+                </tr>
+        		<tr class="borderTableBottom">
+        			<td class="borderTableRight">Full name</td>
+        			<td class="borderTableRight">Login</td>
+                    <td class="borderTableRight">Role</td>
+                    <td>Test (%)</td>
+        		<tr>
+        	</thead>
+            <tbody id="usersList">
+                {{#each tableWithUser}}
+                <tr class="borderTableBottom">
+                    <td class="borderTableRight">{{fullName}}</td>
+                    <td class="borderTableRight">{{login}}</td>
+                    <td class="borderTableRight">{{role}}</td>
+                    <td class="resultTest">{{testResult}}</td>
+                <tr>
+                {{/each}}
+            </tbody>
+    	</table>
+    </div>
+</div>

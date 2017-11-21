@@ -1,0 +1,419 @@
+[
+	{
+		"idQuestion": 1,
+		"question": "Чему равно значение выражения 4 - \"5\" + 0xf - \"1e1\"?",
+		"variantAnswer": [
+				{
+					"idAnswer": 1,
+					"answer": "Цифре",
+					"correct": 1
+				},
+				{
+					"idAnswer": 2,
+					"answer": "Строке",
+					"correct": 0
+				},
+				{
+					"idAnswer": 3,
+					"answer": "NaN",
+					"correct": 0
+				}]
+	},
+	{
+		"idQuestion": 2,
+		"question": "Есть ли разница между выражениями?\n !!( a && b )\n (a && b)",
+		"variantAnswer": [
+			{
+				"idAnswer": 4,
+				"answer": "Да",
+				"correct": 0
+			},
+			{
+				"idAnswer": 5,
+				"answer": "Нет",
+				"correct": 1
+			},
+			{
+				"idAnswer": 6,
+				"answer": "В первом выражении ошибка, что еще за «!!» ??",
+				"correct": 0
+			}
+		]
+	},
+	{
+		"idQuestion": 3,
+		"question": "Чему равна длина arr.length массива arr?\n let arr = [];\n arr[1] = 1;\n arr[3] = 33;",
+		"variantAnswer": [
+			{
+				"idAnswer": 7,
+				"answer": "4",
+				"correct": 1
+			}
+		]
+	},
+	{
+		"idQuestion": 4,
+		"question": "Чему равна сумма [] + 1 + 2?",
+		"variantAnswer": [
+			{
+				"idAnswer": 8,
+				"answer": "1",
+				"correct": 0
+			},
+			{
+				"idAnswer": 9,
+				"answer": "NaN",
+				"correct": 0
+			},
+			{
+				"idAnswer": 10,
+				"answer": "undefined",
+				"correct": 0
+			},
+			{
+				"idAnswer": 11,
+				"answer": "12",
+				"correct": 1
+			},
+			{
+				"idAnswer": 12,
+				"answer": "Другое",
+				"correct": 0
+			}
+		]
+	},
+	{
+		"idQuestion": 5,
+		"question": "Что выведет этот код?\n let y = 1;\n let x = y = typeof x;\n alert(x + 1);",
+		"variantAnswer": [
+			{
+				"idAnswer": 13,
+				"answer": "2",
+				"correct": 0
+			},
+			{
+				"idAnswer": 14,
+				"answer": "number1",
+				"correct": 0
+			},
+			{
+				"idAnswer": 15,
+				"answer": "NaN",
+				"correct": 0
+			},
+			{
+				"idAnswer": 16,
+				"answer": "undefined1",
+				"correct": 1
+			},
+			{
+				"idAnswer": 17,
+				"answer": "Будет ошибка",
+				"correct": 0
+			}
+		]
+	},
+	{
+		"idQuestion": 6,
+		"question": "Какой код корректно найдёт максимальное значение в непустом массиве arr?",
+		"variantAnswer": [
+			{
+				"idAnswer": 18,
+				"answer": "arr.reduce(function(prev, item) { return Math.max(prev, item) })",
+				"correct": 1
+			},
+			{
+				"idAnswer": 19,
+				"answer": "Math.max.apply(null, arr)",
+				"correct": 1
+			},
+			{
+				"idAnswer": 20,
+				"answer": "Math.max(arr)",
+				"correct": 0
+			},
+			{
+				"idAnswer": 21,
+				"answer": "arr.findMax()",
+				"correct": 0
+			}
+		]
+	},
+	{
+		"idQuestion": 7,
+		"question": "Что выведет этот код?\n let a = (1,5 - 1) * 2;\n alert(a);",
+		"variantAnswer": [
+			{
+				"idAnswer": 22,
+				"answer": "0.999999999",
+				"correct": 0
+			},
+			{
+				"idAnswer": 23,
+				"answer": "1",
+				"correct": 0
+			},
+			{
+				"idAnswer": 24,
+				"answer": "0.5",
+				"correct": 0
+			},
+			{
+				"idAnswer": 25,
+				"answer": "8",
+				"correct": 1
+			},
+			{
+				"idAnswer": 26,
+				"answer": "-0.5",
+				"correct": 0
+			},
+			{
+				"idAnswer": 27,
+				"answer": "4",
+				"correct": 0
+			}
+		]
+	},
+	{
+		"idQuestion": 8,
+		"question": "Чему равно i в конце кода?\n for(var i=0; i<10; i++) {\n console.log(i);\n }\n // i = ?",
+		"variantAnswer": [
+			{
+				"idAnswer": 28,
+				"answer": "undefined",
+				"correct": 0
+			},
+			{
+				"idAnswer": 29,
+				"answer": "9",
+				"correct": 0
+			},
+			{
+				"idAnswer": 30,
+				"answer": "10",
+				"correct": 1
+			},
+			{
+				"idAnswer": 31,
+				"answer": "Нет такой переменной после цикла",
+				"correct": 0
+			}
+		]
+	},
+	{
+		"idQuestion": 9,
+		"question": "Что делает оператор **?",
+		"variantAnswer": [
+			{
+				"idAnswer": 32,
+				"answer": "Возводит в степень",
+				"correct": 1
+			},
+			{
+				"idAnswer": 33,
+				"answer": "Умножает число само на себя",
+				"correct": 0
+			},
+			{
+				"idAnswer": 34,
+				"answer": "Нет такого оператора",
+				"correct": 0
+			}
+		]
+	},
+	{
+		"idQuestion": 10,
+		"question": "Какие вызовы parseInt возвратят число?",
+		"variantAnswer": [
+			{
+				"idAnswer": 35,
+				"answer": "parseInt(\"1px\")",
+				"correct": 1
+			},
+			{
+				"idAnswer": 36,
+				"answer": "parseInt(\"-1.2\")",
+				"correct": 1
+			},
+			{
+				"idAnswer": 37,
+				"answer": "parseInt(\"0 минут\")",
+				"correct": 1
+			},
+			{
+				"idAnswer": 38,
+				"answer": "parseInt(\"$1.2\")",
+				"correct": 0
+			}
+		]
+	},
+	{
+		"idQuestion": 11,
+		"question": "Какой результат будет у выражения ниже?\n null + {0:1}[0] + [,[1],][1][0]",
+		"variantAnswer": [
+			{
+				"idAnswer": 39,
+				"answer": "2",
+				"correct": 1
+			}
+		]
+	},
+	{
+		"idQuestion": 12,
+		"question": "Что получится, если сложить true + false?",
+		"variantAnswer": [
+			{
+				"idAnswer": 40,
+				"answer": "\"truefalse\"",
+				"correct": 1
+			},
+			{
+				"idAnswer": 41,
+				"answer": "0",
+				"correct": 0
+			},
+			{
+				"idAnswer": 42,
+				"answer": "1",
+				"correct": 0
+			},
+			{
+				"idAnswer": 43,
+				"answer": "NaN",
+				"correct": 0
+			}
+		]
+	},
+	{
+		"idQuestion": 13,
+		"question": "Что выведет этот код?\n let f = function g() { return 23; };",
+		"variantAnswer": [
+			{
+				"idAnswer": 44,
+				"answer": "alert( typeof g() );",
+				"correct": 0
+			},
+			{
+				"idAnswer": 45,
+				"answer": "number",
+				"correct": 0
+			},
+			{
+				"idAnswer": 46,
+				"answer": "undefined",
+				"correct": 0
+			},
+			{
+				"idAnswer": 47,
+				"answer": "function",
+				"correct": 0
+			},
+			{
+				"idAnswer": 48,
+				"answer": "ошибка",
+				"correct": 1
+			}
+		]
+	},
+	{
+		"idQuestion": 14,
+		"question": "Есть ли различия между проверками:\n if( x <= 100 ) {...}\n // и\n if( !(x > 100) ) {...}",
+		"variantAnswer": [
+			{
+				"idAnswer": 49,
+				"answer": "Да, существует значение x, для которого они работают по-разному",
+				"correct": 1
+			},
+			{
+				"idAnswer": 50,
+				"answer": "Нет, они полностью взаимозаменяемы",
+				"correct": 0
+			},
+			{
+				"idAnswer": 51,
+				"answer": "Зависит от браузера",
+				"correct": 0
+			}
+		]
+	},
+	{
+		"idQuestion": 15,
+		"question": "Что выведет этот код?\n alert( \"1\"[0] );",
+		"variantAnswer": [
+			{
+				"idAnswer": 52,
+				"answer": "1",
+				"correct": 1
+			}
+		]
+	},
+	{
+		"idQuestion": 16,
+		"question": "Сработает ли вызов функции до объявления в этом коде:\n sayHi();\n function sayHi() {\n alert(\"Hello\");\n }",
+		"variantAnswer": [
+			{
+				"idAnswer": 53,
+				"answer": "Да, сработает",
+				"correct": 1
+			},
+			{
+				"idAnswer": 54,
+				"answer": "Нет, вызов должен стоять после объявления",
+				"correct": 0
+			}
+		]
+	},
+	{
+		"idQuestion": 17,
+		"question": " Чему равно такое выражение?\n [] + false - null + true",
+		"variantAnswer": [
+			{
+				"idAnswer": 55,
+				"answer": "0",
+				"correct": 0
+			},
+			{
+				"idAnswer": 56,
+				"answer": "NaN",
+				"correct": 1
+			},
+			{
+				"idAnswer": 57,
+				"answer": "undefined",
+				"correct": 0
+			},
+			{
+				"idAnswer": 58,
+				"answer": "1",
+				"correct": 0
+			}
+		]
+	},
+	{
+		"idQuestion": 18,
+		"question": "Чему равно i в конце кода?\n for(let i=0; i<10; i++) {\n console.log(i);\n }\n // i = ?",
+		"variantAnswer": [
+			{
+				"idAnswer": 59,
+				"answer": "undefined",
+				"correct": 0
+			},
+			{
+				"idAnswer": 60,
+				"answer": "9",
+				"correct": 0
+			},
+			{
+				"idAnswer": 61,
+				"answer": "10",
+				"correct": 0
+			},
+			{
+				"idAnswer": 62,
+				"answer": "Нет такой переменной после цикла",
+				"correct": 1
+			}
+		]
+	}
+]

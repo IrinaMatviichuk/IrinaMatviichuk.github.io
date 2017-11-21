@@ -1,0 +1,15 @@
+.userForm {
+	display: flex;
+	flex-direction: column;
+}
+.fieldAdmin {
+	min-width: 308px;
+	margin: 8px;
+	line-height: 2;
+	border-radius: 4px;
+	background-color: #b7bcbf;
+	border: 0;
+}
+select {
+	min-height: 24px;
+}

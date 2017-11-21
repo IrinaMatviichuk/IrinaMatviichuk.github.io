@@ -1,0 +1,38 @@
+<div id="testCase">
+	<h1 class="testTitle">Test on JavaScript</h1>
+	<progress value="{{progress}}" max="5">Load
+  	</progress>
+	<div id="test">
+		{{#each test}}
+			<h2>{{numberQuestion}}. {{question}}</h2>
+
+			{{#if radio}}
+				{{#each variantAnswer}}
+					<div>
+						<input type="radio" class="radio answer" name="answer" id="Q{{idAnswer}}" />
+						<label for="Q{{idAnswer}}">{{answer}}</label>
+					</div>
+				{{/each}}
+			{{else if input}}
+				{{#each variantAnswer}}
+					<div>
+						<input class="fieldAdmin answer" id="Q{{idAnswer}}" type="text"/>
+						<label for="Q{{idAnswer}}"></label>
+					</div>
+				{{/each}}
+			{{else}}
+				{{#each variantAnswer}}
+					<div>
+						<input type="checkbox" class="checkbox answer" id="Q{{idAnswer}}" />
+						<label for="Q{{idAnswer}}">{{answer}}</label>
+					</div>
+				{{/each}}
+			{{/if}}
+		{{/each}}
+	</div>
+	<button id="onwardTest" class="buttonTest decorElement">Onward</button>
+	<button id="checkTest" class="buttonTest decorElement notVisible">Check</button>
+</div>
+<div id="userResult">
+	
+</div>

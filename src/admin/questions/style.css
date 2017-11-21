@@ -1,0 +1,44 @@
+.editAdminButton {
+	width: 56px;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.3);
+	color: #bbb;
+	border: 0;
+}
+.createQuestions, .editQuestions {
+	display: flex;
+	flex-direction: column;
+}
+.caseQuestion {	
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 4px;
+	align-items: center;
+}
+.labelQuestion {
+	width: 20%;
+	margin-bottom: 4px;
+}
+.fieldQuestion {
+	width: 70%;
+	margin: 0 4px 4px;
+	line-height: 2;
+	border-radius: 4px;
+	background-color: #b7bcbf;
+	border: 0;
+}
+.checkboxAnswer {
+	height: 24px;
+	float: left;
+	background-color: #fff;
+}
+.enterAnswerCase {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+.answerEnterLabel {
+	margin: 8px auto;
+}

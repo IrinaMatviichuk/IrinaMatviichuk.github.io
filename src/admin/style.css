@@ -1,0 +1,57 @@
+table {
+	color: #bbb;
+	border-collapse: collapse;
+	font-size: 12px;
+	line-height: 2;
+	border: 0;
+}
+thead {
+	text-align: center;
+	font-size: 14px;
+}
+.borderTableRight {
+	border-right-color: rgba(0, 0, 0, 0.5);
+	border-right-style: dotted;
+	border-right-width: 1px;
+}
+.borderTableBottom {
+	border-bottom-color: rgba(0, 0, 0, 0.5);
+	border-bottom-style: dotted;
+	border-bottom-width: 1px;
+}
+.search {
+	width: 98%;
+	min-width: 56px;
+	color: #bbb;
+	background: rgba(0, 0, 0, 0.3);
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8);
+	border-radius: 4px;
+	border: 0;
+	text-align: center;
+	line-height: 2;
+	margin-bottom: 4px;
+}
+.buttonForAdminControl {
+	display: flex;
+	justify-content: space-around;
+}
+.buttonAdmin {
+	min-width: 20%;
+	max-width: 48px;
+	background-color: #3E3E3E;
+	border: 0;
+	border-radius: 4px;
+	margin-top: 4px;
+}
+dialog {
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	border-radius: 4px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	background-color: #BB9E74;
+	padding: 8px;
+	color: #404040;
+	font-size: 12px;
+}
+dialog::backdrop {
+	background-color: rgba(0, 0, 0, 0.8);
+}
